@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Management</title>
+    <style>
+        body {
+            background: #f7f9fa;
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 38px auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 32px 22px 26px 22px;
+            border: 1px solid #e2e6ea;
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            color: #b41a1f;
+            font-weight: 700;
+            margin-bottom: 23px;
+            letter-spacing: 1px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+        label {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        input, select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            background: #fafbfc;
+            outline: none;
+            box-sizing: border-box;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus {
+            border: 1.5px solid #b41a1f;
+        }
+        button {
+            margin-top: 5px;
+            padding: 11px 0;
+            background: #b41a1f;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            letter-spacing: .5px;
+            transition: background 0.18s;
+        }
+        button:hover {
+            background: #881016;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 8px;
+            font-size: 0.98rem;
+        }
+        th, td {
+            border: 1px solid #e2e6ea;
+            padding: 9px 3px;
+            text-align: center;
+        }
+        th {
+            background: #f7f9fa;
+            color: #b41a1f;
+            font-weight: 700;
+        }
+        tr:nth-child(even) td {
+            background: #fbfbfb;
+        }
+        @media (max-width: 560px) {
+            .container {padding: 10px 2vw;}
+            th, td {font-size: .93rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Donation Management</h1>
+        <form>
+            <label for="name">Donor Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter donor name" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="65" placeholder="Enter Age" required>
+            
+            <label for="bloodgroup">Blood Group:</label>
+            <select id="bloodgroup" name="bloodgroup" required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>O+</option><option>O-</option>
+                <option>AB+</option><option>AB-</option>
+            </select>
+            
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required>
+            
+            <button type="submit">Add Donor</button>
+        </form>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>Sample Donor</td>
+                <td>30</td>
+                <td>A+</td>
+                <td>9876543210</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
